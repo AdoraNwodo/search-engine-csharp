@@ -7,7 +7,7 @@
 
 Search Engine in C# that checks for files local on your system that contain a specific query string.
 
-The Application is able to search .pdf, .doc, .docx, .ppt, .pptx, .xls, .xlsx, .txt, .html and .xml files
+The Application takes in a query string and is able to search .pdf, .doc, .docx, .ppt, .pptx, .xls, .xlsx, .txt, .html and .xml files for search results (files that contain the string when stop words are removed).
 
 
 ## Requirements

@@ -1,0 +1,342 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<root>
+	<xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+		<xsd:element name="root" msdata:IsDataSet="true">
+			<xsd:complexType>
+				<xsd:choice maxOccurs="unbounded">
+					<xsd:element name="data">
+						<xsd:complexType>
+							<xsd:sequence>
+								<xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+								<xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+							</xsd:sequence>
+							<xsd:attribute name="name" type="xsd:string" />
+							<xsd:attribute name="type" type="xsd:string" />
+							<xsd:attribute name="mimetype" type="xsd:string" />
+						</xsd:complexType>
+					</xsd:element>
+					<xsd:element name="resheader">
+						<xsd:complexType>
+							<xsd:sequence>
+								<xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+							</xsd:sequence>
+							<xsd:attribute name="name" type="xsd:string" use="required" />
+						</xsd:complexType>
+					</xsd:element>
+				</xsd:choice>
+			</xsd:complexType>
+		</xsd:element>
+	</xsd:schema>
+	<resheader name="ResMimeType">
+		<value>text/microsoft-resx</value>
+	</resheader>
+	<resheader name="Version">
+		<value>1.0.0.0</value>
+	</resheader>
+	<resheader name="Reader">
+		<value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=1.0.5000.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+	</resheader>
+	<resheader name="Writer">
+		<value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=1.0.5000.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+	</resheader>
+	<!-- Function Names -->
+	<data name="abs"><value>ABS</value></data>
+	<data name="absref"><value>REFABS</value></data>
+	<data name="acos"><value>ACOS</value></data>
+	<data name="acosh"><value>ACOSH</value></data>
+	<data name="address"><value>ADRESSE</value></data>
+	<data name="and"><value>ET</value></data>
+	<data name="areas"><value>ZONES</value></data>
+	<data name="argument"><value>ARGUMENT</value></data>
+	<data name="asc"><value>ASC</value></data>
+	<data name="asin"><value>ASIN</value></data>
+	<data name="asinh"><value>ASINH</value></data>
+	<data name="atan"><value>ATAN</value></data>
+	<data name="atan2"><value>ATAN2</value></data>
+	<data name="atanh"><value>ATANH</value></data>
+	<data name="avedev"><value>ECART.MOYEN</value></data>
+	<data name="average"><value>MOYENNE</value></data>
+	<data name="betadist"><value>LOI.BETA</value></data>
+	<data name="betainv"><value>BETA.INVERSE</value></data>
+	<data name="binomdist"><value>LOI.BINOMIALE</value></data>
+	<data name="call"><value>FONCTION.APPELANTE</value></data>
+	<data name="caller"><value>CELLULE.APPELANTE</value></data>
+	<data name="cancel"><value>KEY	TOUCHE.ARRET</value></data>
+	<data name="ceiling"><value>PLAFOND</value></data>
+	<data name="cell"><value>CELLULE</value></data>
+	<data name="char"><value>CAR</value></data>
+	<data name="chidist"><value>LOI.KHIDEUX</value></data>
+	<data name="chiinv"><value>KHIDEUX.INVERSE</value></data>
+	<data name="chitest"><value>TEST.KHIDEUX</value></data>
+	<data name="choose"><value>CHOISIR</value></data>
+	<data name="clean"><value>EPURAGE</value></data>
+	<data name="code"><value>CODE</value></data>
+	<data name="column"><value>COLONNE</value></data>
+	<data name="columns"><value>COLONNES</value></data>
+	<data name="combin"><value>COMBIN</value></data>
+	<data name="concatenate"><value>CONCATENER</value></data>
+	<data name="confidence"><value>INTERVALLE.CONFIANCE</value></data>
+	<data name="correl"><value>COEFFICIENT.CORRELATION</value></data>
+	<data name="cos"><value>COS</value></data>
+	<data name="cosh"><value>COSH</value></data>
+	<data name="count"><value>NB</value></data>
+	<data name="counta"><value>NBVAL</value></data>
+	<data name="countblank"><value>NB.VIDE</value></data>
+	<data name="countif"><value>NB.SI</value></data>
+	<data name="covar"><value>COVARIANCE</value></data>
+	<data name="create"><value>OBJECT	CREER.OBJET</value></data>
+	<data name="critbinom"><value>CRITERE.LOI.BINOMIALE</value></data>
+	<data name="custom"><value>REPEAT	REPETER.PERSONNALISE</value></data>
+	<data name="date"><value>DATE</value></data>
+	<data name="datedif"><value>DATEDIF</value></data>
+	<data name="datestring"><value>DATESTRING</value></data>
+	<data name="datevalue"><value>DATEVAL</value></data>
+	<data name="daverage"><value>BDMOYENNE</value></data>
+	<data name="day"><value>JOUR</value></data>
+	<data name="days360"><value>JOURS360</value></data>
+	<data name="db"><value>DB</value></data>
+	<data name="dbcs"><value>DBCS</value></data>
+	<data name="dcount"><value>BDNB</value></data>
+	<data name="dcounta"><value>BDNBVAL</value></data>
+	<data name="ddb"><value>DDB</value></data>
+	<data name="degrees"><value>DEGRES</value></data>
+	<data name="deref"><value>DEREF</value></data>
+	<data name="devsq"><value>SOMME.CARRES.ECARTS</value></data>
+	<data name="dget"><value>BDLIRE</value></data>
+	<data name="directory"><value>REPERTOIRE</value></data>
+	<data name="dmax"><value>BDMAX</value></data>
+	<data name="dmin"><value>BDMIN</value></data>
+	<data name="documents"><value>DOCUMENTS</value></data>
+	<data name="dollar"><value>FRANC</value></data>
+	<data name="dproduct"><value>BDPRODUIT</value></data>
+	<data name="dstdev"><value>BDECARTYPE</value></data>
+	<data name="dstdevp"><value>BDECARTYPEP</value></data>
+	<data name="dsum"><value>BDSOMME</value></data>
+	<data name="dvar"><value>BDVAR</value></data>
+	<data name="dvarp"><value>BDVARP</value></data>
+	<data name="echo"><value>ECRAN</value></data>
+	<data name="error"><value>ERREUR</value></data>
+	<data name="evaluate"><value>EVALUER</value></data>
+	<data name="even"><value>PAIR</value></data>
+	<data name="exact"><value>EXACT</value></data>
+	<data name="exec"><value>LANCER</value></data>
+	<data name="execute"><value>EXEC</value></data>
+	<data name="exp"><value>EXP</value></data>
+	<data name="expondist"><value>LOI.EXPONENTIELLE</value></data>
+	<data name="fact"><value>FACT</value></data>
+	<data name="fclose"><value>F.FERMER</value></data>
+	<data name="fdist"><value>LOI.F</value></data>
+	<data name="files"><value>FICHIERS</value></data>
+	<data name="find"><value>TROUVE</value></data>
+	<data name="findb"><value>FINDB</value></data>
+	<data name="finv"><value>INVERSE.LOI.F</value></data>
+	<data name="fisher"><value>FISHER</value></data>
+	<data name="fisherinv"><value>FISHER.INVERSE</value></data>
+	<data name="fixed"><value>CTXT</value></data>
+	<data name="floor"><value>PLANCHER</value></data>
+	<data name="fopen"><value>F.OUVRIR</value></data>
+	<data name="forecast"><value>PREVISION</value></data>
+	<data name="formula"><value>CONVERT	CONVERSION.FORMULE</value></data>
+	<data name="fpos"><value>F.POSITION</value></data>
+	<data name="fread"><value>F.LIRE</value></data>
+	<data name="freadln"><value>F.LIRE.LIGNE</value></data>
+	<data name="frequency"><value>FREQUENCE</value></data>
+	<data name="fsize"><value>F.DIMENSION</value></data>
+	<data name="ftest"><value>TEST.F</value></data>
+	<data name="fv"><value>VC</value></data>
+	<data name="fwrite"><value>F.ECRIRE</value></data>
+	<data name="fwriteln"><value>F.ECRIRE.LIGNE</value></data>
+	<data name="gammadist"><value>LOI.GAMMA</value></data>
+	<data name="gammainv"><value>LOI.GAMMA.INVERSE</value></data>
+	<data name="gammaln"><value>LNGAMMA</value></data>
+	<data name="geomean"><value>MOYENNE.GEOMETRIQUE</value></data>
+	<data name="goto"><value>ATTEINDRE</value></data>
+	<data name="group"><value>GROUPER</value></data>
+	<data name="growth"><value>CROISSANCE</value></data>
+	<data name="halt"><value>ARRETER</value></data>
+	<data name="harmean"><value>MOYENNE.HARMONIQUE</value></data>
+	<data name="help"><value>AIDE</value></data>
+	<data name="hlookup"><value>RECHERCHEH</value></data>
+	<data name="hour"><value>HEURE</value></data>
+	<data name="hypgeomdist"><value>LOI.HYPERGEOMETRIQUE</value></data>
+	<data name="if"><value>IF</value></data>
+	<data name="index"><value>INDEX</value></data>
+	<data name="indirect"><value>INDIRECT</value></data>
+	<data name="info"><value>INFO</value></data>
+	<data name="initiate"><value>ACCEDER</value></data>
+	<data name="input"><value>ENTRER</value></data>
+	<data name="int"><value>ENT</value></data>
+	<data name="intercept"><value>ORDONNEE.ORIGINE</value></data>
+	<data name="ipmt"><value>INTPER</value></data>
+	<data name="irr"><value>TRI</value></data>
+	<data name="isblank"><value>ESTVIDE</value></data>
+	<data name="iserr"><value>ESTERR</value></data>
+	<data name="iserror"><value>ESTERREUR</value></data>
+	<data name="islogical"><value>ESTLOGIQUE</value></data>
+	<data name="isna"><value>ESTNA</value></data>
+	<data name="isnontext"><value>ESTNONTEXTE</value></data>
+	<data name="isnumber"><value>ESTNUM</value></data>
+	<data name="ispmt"><value>ISPMT</value></data>
+	<data name="isref"><value>ESTREF</value></data>
+	<data name="istext"><value>ESTTEXTE</value></data>
+	<data name="kurt"><value>KURTOSIS</value></data>
+	<data name="large"><value>GRANDE.VALEUR</value></data>
+	<data name="last"><value>ERROR	DERNIERE.ERREUR</value></data>
+	<data name="left"><value>GAUCHE</value></data>
+	<data name="leftb"><value>LEFTB</value></data>
+	<data name="len"><value>NBCAR</value></data>
+	<data name="lenb"><value>LENB</value></data>
+	<data name="linest"><value>DROITEREG</value></data>
+	<data name="links"><value>LIAISONS</value></data>
+	<data name="ln"><value>LN</value></data>
+	<data name="log"><value>LOG</value></data>
+	<data name="log10"><value>LOG10</value></data>
+	<data name="logest"><value>LOGREG</value></data>
+	<data name="loginv"><value>LOI.LOGNORMALE.INVERSE</value></data>
+	<data name="lognormdist"><value>LOI.LOGNORMALE</value></data>
+	<data name="lookup"><value>RECHERCHE</value></data>
+	<data name="lower"><value>MINUSCULE</value></data>
+	<data name="match"><value>EQUIV</value></data>
+	<data name="max"><value>MAX</value></data>
+	<data name="mdeterm"><value>DETERMAT</value></data>
+	<data name="median"><value>MEDIANE</value></data>
+	<data name="mid"><value>STXT</value></data>
+	<data name="midb"><value>MIDB</value></data>
+	<data name="min"><value>MIN</value></data>
+	<data name="minute"><value>MINUTE</value></data>
+	<data name="minverse"><value>INVERSEMAT</value></data>
+	<data name="mirr"><value>TRIM</value></data>
+	<data name="mmult"><value>PRODUITMAT</value></data>
+	<data name="mod"><value>MOD</value></data>
+	<data name="mode"><value>MODE</value></data>
+	<data name="month"><value>MOIS</value></data>
+	<data name="movie"><value>COMMAND	COMMANDE.ANIMATION</value></data>
+	<data name="n"><value>N</value></data>
+	<data name="na"><value>NA</value></data>
+	<data name="names"><value>NOMS</value></data>
+	<data name="negbinomdist"><value>LOI.BINOMIALE.NEG</value></data>
+	<data name="normdist"><value>LOI.NORMALE</value></data>
+	<data name="norminv"><value>LOI.NORMALE.INVERSE</value></data>
+	<data name="normsdist"><value>LOI.NORMALE.STANDARD</value></data>
+	<data name="normsinv"><value>LOI.NORMALE.STANDARD.INVERSE</value></data>
+	<data name="not"><value>NON</value></data>
+	<data name="note"><value>COMMENTAIRES</value></data>
+	<data name="now"><value>MAINTENANT</value></data>
+	<data name="nper"><value>NPM</value></data>
+	<data name="npv"><value>VAN</value></data>
+	<data name="numberstring"><value>NUMBERSTRING</value></data>
+	<data name="odd"><value>IMPAIR</value></data>
+	<data name="offset"><value>DECALER</value></data>
+	<data name="open"><value>DIALOG	OUVRIR.DIALOGUE</value></data>
+	<data name="options"><value>LISTS.GET	LIRE.LISTES.PERSONNELLES</value></data>
+	<data name="or"><value>OU</value></data>
+	<data name="pause"><value>PAUSE</value></data>
+	<data name="pearson"><value>PEARSON</value></data>
+	<data name="percentile"><value>CENTILE</value></data>
+	<data name="percentrank"><value>RANG.POURCENTAGE</value></data>
+	<data name="permut"><value>PERMUTATION</value></data>
+	<data name="pi"><value>PI</value></data>
+	<data name="pmt"><value>VPM</value></data>
+	<data name="poisson"><value>LOI.POISSON</value></data>
+	<data name="poke"><value>POINT</value></data>
+	<data name="power"><value>PUISSANCE</value></data>
+	<data name="ppmt"><value>PRINCPER</value></data>
+	<data name="press"><value>TOOL	ENFONCER.OUTIL</value></data>
+	<data name="prob"><value>PROBABILITE</value></data>
+	<data name="product"><value>PRODUIT</value></data>
+	<data name="proper"><value>NOMPROPRE</value></data>
+	<data name="pv"><value>VA</value></data>
+	<data name="quartile"><value>QUARTILE</value></data>
+	<data name="radians"><value>RADIANS</value></data>
+	<data name="rand"><value>ALEA</value></data>
+	<data name="rank"><value>RANG</value></data>
+	<data name="rate"><value>TAUX</value></data>
+	<data name="reftext"><value>TEXTEREF</value></data>
+	<data name="register"><value>REGISTRE</value></data>
+	<data name="register"><value>ID	REGISTRE.NUMERO</value></data>
+	<data name="relref"><value>REFREL</value></data>
+	<data name="replace"><value>REMPLACER</value></data>
+	<data name="replaceb"><value>REPLACEB</value></data>
+	<data name="rept"><value>REPT</value></data>
+	<data name="request"><value>REQUETE</value></data>
+	<data name="reset"><value>TOOLBAR	RETABLIR.BARRE.OUTILS</value></data>
+	<data name="restart"><value>RECOMMENCER</value></data>
+	<data name="result"><value>RESULTAT</value></data>
+	<data name="resume"><value>REPRISE</value></data>
+	<data name="right"><value>DROITE</value></data>
+	<data name="rightb"><value>RIGHTB</value></data>
+	<data name="roman"><value>ROMAIN</value></data>
+	<data name="round"><value>ARRONDI</value></data>
+	<data name="rounddown"><value>ARRONDI.INF</value></data>
+	<data name="roundup"><value>ARRONDI.SUP</value></data>
+	<data name="row"><value>LIGNE</value></data>
+	<data name="rows"><value>LIGNES</value></data>
+	<data name="rsq"><value>COEFFICIENT.DETERMINATION</value></data>
+	<data name="search"><value>CHERCHE</value></data>
+	<data name="searchb"><value>SEARCHB</value></data>
+	<data name="second"><value>SECONDE</value></data>
+	<data name="selection"><value>SELECTION</value></data>
+	<data name="series"><value>SERIE</value></data>
+	<data name="sign"><value>SIGNE</value></data>
+	<data name="sin"><value>SIN</value></data>
+	<data name="sinh"><value>SINH</value></data>
+	<data name="skew"><value>COEFFICIENT.ASYMETRIE</value></data>
+	<data name="sln"><value>AMORLIN</value></data>
+	<data name="slope"><value>PENTE</value></data>
+	<data name="small"><value>PETITE.VALEUR</value></data>
+	<data name="sqrt"><value>RACINE</value></data>
+	<data name="standardize"><value>CENTREE.REDUITE</value></data>
+	<data name="stdev"><value>ECARTYPE</value></data>
+	<data name="stdeva"><value>ECARTYPEA</value></data>
+	<data name="stdevp"><value>ECARTYPEP</value></data>
+	<data name="stdevpa"><value>ECARTYPEPA</value></data>
+	<data name="step"><value>PAS.A.PAS</value></data>
+	<data name="steyx"><value>ERREUR.TYPE.XY</value></data>
+	<data name="substitute"><value>SUBSTITUE</value></data>
+	<data name="subtotal"><value>SOUS.TOTAL</value></data>
+	<data name="sum"><value>SOMME</value></data>
+	<data name="sumif"><value>SOMME.SI</value></data>
+	<data name="sumproduct"><value>SOMMEPROD</value></data>
+	<data name="sumsq"><value>SOMME.CARRES</value></data>
+	<data name="sumx2my2"><value>SOMME.X2MY2</value></data>
+	<data name="sumx2py2"><value>SOMME.X2PY2</value></data>
+	<data name="sumxmy2"><value>SOMME.XMY2</value></data>
+	<data name="syd"><value>SYD</value></data>
+	<data name="t"><value>T</value></data>
+	<data name="tan"><value>TAN</value></data>
+	<data name="tanh"><value>TANH</value></data>
+	<data name="tdist"><value>LOI.STUDENT</value></data>
+	<data name="terminate"><value>TERMINER</value></data>
+	<data name="text"><value>TEXTE</value></data>
+	<data name="textref"><value>REFTEXTE</value></data>
+	<data name="time"><value>TEMPS</value></data>
+	<data name="timevalue"><value>TEMPSVAL</value></data>
+	<data name="tinv"><value>LOI.STUDENT.INVERSE</value></data>
+	<data name="today"><value>AUJOURDHUI</value></data>
+	<data name="transpose"><value>TRANSPOSE</value></data>
+	<data name="trend"><value>TENDANCE</value></data>
+	<data name="trim"><value>SUPPRESPACE</value></data>
+	<data name="trimmean"><value>MOYENNE.REDUITE</value></data>
+	<data name="trunc"><value>TRONQUE</value></data>
+	<data name="ttest"><value>TEST.STUDENT</value></data>
+	<data name="type"><value>TYPE</value></data>
+	<data name="unregister"><value>SUPPRIMER.REGISTRE</value></data>
+	<data name="upper"><value>MAJUSCULE</value></data>
+	<data name="usdollar"><value>USDOLLAR</value></data>
+	<data name="value"><value>CNUM</value></data>
+	<data name="var"><value>VAR</value></data>
+	<data name="vara"><value>VARA</value></data>
+	<data name="varp"><value>VAR.P</value></data>
+	<data name="varp"><value>VAR.PA</value></data>
+	<data name="vdb"><value>VDB</value></data>
+	<data name="vlookup"><value>RECHERCHEV</value></data>
+	<data name="volatile"><value>VOLATILE</value></data>
+	<data name="weekday"><value>JOURSEM</value></data>
+	<data name="weibull"><value>LOI.WEIBULL</value></data>
+	<data name="window"><value>TITLE	TITRE.FENETRE</value></data>
+	<data name="windows"><value>FENETRES</value></data>
+	<data name="year"><value>ANNEE</value></data>
+	<data name="ztest"><value>TEST.Z</value></data>
+	<data name="false"><value>FAUX</value></data>
+	<data name="true"><value>VRAI</value></data>
+</root>

@@ -1,0 +1,428 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>SearchEngine</name>
+    </assembly>
+    <members>
+        <member name="T:SearchEngine.DatabaseEngine">
+            <summary>
+            Performs operations of saving, reading, retrieving and updating on the database
+            </summary>
+        </member>
+        <member name="M:SearchEngine.DatabaseEngine.AddDocument(System.String,System.Collections.Generic.List{System.String})">
+            <summary>
+            Adds document information to the database.
+            Document Information being the path of the file and the list of all keywords
+            </summary>
+            <param name="docPath">file path</param>
+            <param name="tokens">keywords list</param>
+            <returns>1 if successful and 0 otherwise</returns>
+        </member>
+        <member name="M:SearchEngine.DatabaseEngine.ReadDocuments(System.Collections.Generic.List{System.String})">
+            <summary>
+            Reads keywords from documents in a file by specifying the file path.
+            </summary>
+            <param name="doc_paths">the file paths</param>
+            <returns>
+            A Dictionary having the file path as its key and the list of distinct tokens as its value
+            </returns>
+        </member>
+        <member name="M:SearchEngine.DatabaseEngine.UpdateDocument(System.String,System.Collections.Generic.List{System.String})">
+            <summary>
+            Updates the record of a document in the database.
+            </summary>
+            <param name="docPath">the file path</param>
+            <param name="tokens">list of keywords affiliated with the document</param>
+            <returns>1 if successful and 0 otherwise</returns>
+        </member>
+        <member name="M:SearchEngine.DatabaseEngine.GetDocumentPaths">
+            <summary>
+            Returns the list of paths of the documents in the database
+            </summary>
+            <returns>the document paths</returns>
+        </member>
+        <member name="M:SearchEngine.DatabaseEngine.StoreSearchTerm(System.String)">
+            <summary>
+            Adds the terms that have been searched to a record
+            </summary>
+            <param name="term">the term to be stored</param>
+            <returns>1 if successful and 0 otherwise.</returns>
+        </member>
+        <member name="M:SearchEngine.DatabaseEngine.GetSearchedTerms">
+            <summary>
+            Retrieves the searched items
+            </summary>
+            <returns>the searched terms</returns>
+        </member>
+        <member name="M:SearchEngine.DatabaseEngine.GenerateCommaSeparatedValuesFromList(System.Collections.Generic.List{System.String})">
+            <summary>
+            Uses the list of strings to generate values that will be separated by commas
+            </summary>
+            <param name="listOfStrings">the list of strings</param>
+            <returns>the string with commas seperating each value</returns>
+        </member>
+        <member name="M:SearchEngine.DatabaseEngine.GenerateListFromCsv(System.String)">
+            <summary>
+            Generates a list of strings from the strings separated by commas
+            </summary>
+            <param name="csv">the comma seperated value string</param>
+            <returns>the list of strings</returns>
+        </member>
+        <member name="T:SearchEngine.DirectoryOperations">
+            <summary>
+            Performs search operations in the directory and links to a datasource 
+            </summary>
+        </member>
+        <member name="T:SearchEngine.FileHandler">
+            <summary>
+            Handles the reading and tokenizing of files with different formats
+            </summary>
+        </member>
+        <member name="F:SearchEngine.FileHandler.extensions">
+            <summary>
+            Supported File extensions
+            </summary>
+        </member>
+        <member name="M:SearchEngine.FileHandler.readPdfFile(System.String)">
+            <summary>
+            Reads PDF file types and extracts the words in each PDF file
+            Requires: The file path is in .pdf only
+            </summary>
+            <param name="filenameWithPath">path of PDF document including filename</param>
+            <exception cref="T:System.PlatformNotSupportedException">Thrown when the file to read is not a Portable Document
+            Format file. 
+            </exception>
+            <returns>
+            A Dictionary where the Key contains the filename and the Value contains the entire wordlist 
+            </returns>
+        </member>
+        <member name="M:SearchEngine.FileHandler.readDocFiles(System.String)">
+            <summary>
+            Reads DOC and DOCX file types and extracts the words in each file
+            Requires: The file path is in doc or docx format only
+            </summary>
+            <param name="filenameWithPath">path of DOC or DOCX document including filename</param>
+            <exception cref="T:System.PlatformNotSupportedException">Thrown when the file to read is not of supported
+            doc format. 
+            </exception>
+            <returns>
+            A Dictionary where the Key contains the filename and the Value contains the entire wordlist 
+            </returns>
+        </member>
+        <member name="M:SearchEngine.FileHandler.readPPTFiles(System.String)">
+            <summary>
+            Reads PPT and PPTX file types and extracts the words in each file
+            Requires: The file path is in ppt or pptx format only
+            </summary>
+            <param name="filenameWithPath">path of PPT and PPTX document including filename</param>
+            <exception cref="T:System.PlatformNotSupportedException">Thrown when the file to read is not of supported
+            presentation format. </exception>
+            <returns>
+            A Dictionary where the Key contains the filename and the Value contains the entire wordlist 
+            </returns>
+        </member>
+        <member name="M:SearchEngine.FileHandler.readExcelFiles(System.String,System.String)">
+            <summary>
+            Reads XLS and XLSX file types and extracts the words in each file.
+            Requires: The file path is in xls or xlsx format only
+            </summary>
+            <param name="filenameWithPath">path of XLS and XLSX document including filename</param>
+            <param name="extension">the excel file extension. xls or xlsx</param>
+            <exception cref="T:System.PlatformNotSupportedException">Thrown when the file to read is not of supported
+            spreadsheet format. 
+            </exception>
+            <returns>
+            A Dictionary where the Key contains the filename and the Value contains the entire wordlist 
+            </returns>
+        </member>
+        <member name="M:SearchEngine.FileHandler.readTxtFiles(System.String)">
+            <summary>
+            Reads TXT file types and extracts the words in each TXT file
+            Requires: The file path is in txt format only
+            </summary>
+            <param name="filenameWithPath">path of TXT document including filename</param>
+            <exception cref="T:System.PlatformNotSupportedException">Thrown when the file to read is not of supported
+            text format. 
+            </exception>
+            <returns>
+            A Dictionary where the Key contains the filename and the Value contains the entire wordlist 
+            </returns>
+        </member>
+        <member name="M:SearchEngine.FileHandler.readXMLFiles(System.String)">
+            <summary>
+            Reads XML file types and extracts the words in each XML file
+            Requires: The file path is in xml format only
+            </summary>
+            <param name="filenameWithPath">path of XML document including filename</param>
+            <exception cref="T:System.PlatformNotSupportedException">Thrown when the file to read is not of 
+            xml format.</exception>
+            <returns>
+            A Dictionary where the Key contains the filename and the Value contains the entire wordlist 
+            </returns>
+        </member>
+        <member name="M:SearchEngine.FileHandler.readHTMLFiles(System.String)">
+            <summary>
+            Reads HTML file types and extracts the words in each HTML file
+            Requires: The file path is in .html format only
+            </summary>
+            <param name="filenameWithPath">path of HTML document including filename</param>
+            <exception cref="T:System.PlatformNotSupportedException">Thrown when the file to read is not of supported
+            html format.</exception>
+            <returns>
+            A Dictionary where the Key contains the filename and the Value contains the entire wordlist 
+            </returns>
+        </member>
+        <member name="M:SearchEngine.FileHandler.readFiles(System.String)">
+            <summary>
+            Action to read file of different extensions by detecting extensions
+            Can read only .pdf, .doc, .docx, .ppt, .pptx, .xls, .xlsx, .txt .html and .xml 
+            
+            </summary>
+            <param name="filenameWithPath">document path including filename</param>
+            <exception cref="T:System.PlatformNotSupportedException">Thrown when there is an attempt to read
+            a file with an unsupported file extension</exception>
+            <returns>the list of tokens for each file</returns>
+        </member>
+        <member name="M:SearchEngine.FileHandler.readfromDirectory(System.String)">
+            <summary>
+            Attemps to read all the files in a given directory and return a list of tokens for each file
+            </summary>
+            <param name="directoryname">directory to read from</param>
+            <returns>a list of tokens for each files</returns>
+        </member>
+        <member name="M:SearchEngine.DirectoryOperations.#ctor(System.String)">
+            <summary>
+            The Directory to be searched
+            </summary>
+            <param name="directory">directory path name</param>
+        </member>
+        <member name="M:SearchEngine.DirectoryOperations.initializeDirectory">
+            <summary>
+            Reads all the files in the given directory and writes all tokens and file paths to the database
+            </summary>
+        </member>
+        <member name="M:SearchEngine.DirectoryOperations.refreshDirectory">
+            <summary>
+            Re-initializes the directory, checks if new files have been added 
+            and updates the database if so, and gets the index table
+            </summary>
+        </member>
+        <member name="M:SearchEngine.DirectoryOperations.writeToDatabase(System.Collections.Generic.List{System.Collections.Generic.Dictionary{System.String,System.Collections.Generic.List{System.String}}})">
+            <summary>
+            Adds the path and lists of tokens in a document to the database
+            </summary>
+            <param name="docsToBeStored"></param>
+        </member>
+        <member name="M:SearchEngine.DirectoryOperations.loadIndexTable">
+            <summary>
+            Returns the index table which consists of the Word as the Key
+            and an object that contains a list of all the files where that word can be found as the Value
+            </summary>
+        </member>
+        <member name="M:SearchEngine.DirectoryOperations.Find(System.String)">
+            <summary>
+            This method searches for a given query, saves query and results
+            Requires: The query value is not empty or null or whitespaces
+            </summary>
+            <exception cref="T:System.NullReferenceException">Thrown when the query string is null or consists of only white spaces</exception>
+            <param name="query">the query string</param>
+            <returns>an instance of the MatchResponseclass- A list of documents and the 
+            time taken to retrieve those documents</returns>
+        </member>
+        <member name="P:SearchEngine.DirectoryOperations.DB">
+            <summary>
+            Returns an instance of the DatabaseEngine
+            </summary>
+        </member>
+        <member name="P:SearchEngine.DirectoryOperations.SearchedTerms">
+            <summary>
+            Gets the searched items from the DatabaseEngine
+            </summary>
+        </member>
+        <member name="P:SearchEngine.DirectoryOperations.Index">
+            <summary>
+            Returns the index table
+            </summary>
+        </member>
+        <member name="P:SearchEngine.DirectoryOperations.DocumentsInDirectory">
+            <summary>
+            Gets all the documents in the directory
+            </summary>
+        </member>
+        <member name="T:SearchEngine.Document">
+            <summary>
+            Represents a Document 
+            </summary>
+        </member>
+        <member name="M:SearchEngine.Document.#ctor(System.String,System.Int32)">
+            <summary>
+            A new Document
+            </summary>
+            <param name="DocId">the document name</param>
+            <param name="TermPosition">the term position in a document</param>
+        </member>
+        <member name="P:SearchEngine.Document.DocID">
+            <summary>
+            Gets the documents ID
+            </summary>
+        </member>
+        <member name="P:SearchEngine.Document.TermPositionInDocument">
+            <summary>
+            Gets the term's position in this Document 
+            </summary>
+        </member>
+        <member name="T:SearchEngine.frmHomePage">
+            <summary>
+            Search Engine Home page
+            </summary>
+        </member>
+        <member name="M:SearchEngine.frmHomePage.#ctor">
+            <summary>
+            Search Engine Home page
+            </summary>
+        </member>
+        <member name="F:SearchEngine.frmHomePage.components">
+            <summary>
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:SearchEngine.frmHomePage.Dispose(System.Boolean)">
+            <summary>
+            Clean up any resources being used.
+            </summary>
+            <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        </member>
+        <member name="M:SearchEngine.frmHomePage.InitializeComponent">
+            <summary>
+            Required method for Designer support - do not modify
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="T:SearchEngine.MatchResponse">
+            <summary>
+            Contains the top documents after every search and the time used in searching
+            </summary>
+        </member>
+        <member name="P:SearchEngine.MatchResponse.TopDocuments">
+            <summary>
+            Represents the Relevant Documents after a search action
+            </summary>
+        </member>
+        <member name="P:SearchEngine.MatchResponse.ResponseTime">
+            <summary>
+            Represents the time taken to complete a search action
+            </summary>
+        </member>
+        <member name="M:SearchEngine.Program.Main">
+            <summary>
+            The main entry point for the application.
+            </summary>
+        </member>
+        <member name="T:SearchEngine.Keywords">
+            <summary>
+            The keyword present in a document
+            </summary>
+        </member>
+        <member name="M:SearchEngine.Keywords.#ctor(System.String)">
+            <summary>
+             Term in a document
+            </summary>
+            <param name="nameOfTerm">the term name</param>
+        </member>
+        <member name="M:SearchEngine.Keywords.AddAffiliatedDocument(SearchEngine.Document)">
+            <summary>
+            Adds a document that is affiliated with the term
+            </summary>
+            <param name="doc">the document</param>
+        </member>
+        <member name="M:SearchEngine.Keywords.AddAffiliatedDocument(System.String,System.Int32)">
+            <summary>
+            Adds a document that is affiliated with the term
+            </summary>
+            <param name="docId">the document name</param>
+            <param name="TermPositionInDocument">the position of the term in the document</param>
+        </member>
+        <member name="M:SearchEngine.Keywords.NumberOfDocsWithTerm">
+            <summary>
+            Computes the number of documents having a term
+            </summary>
+            <returns>the number of files having the term</returns>
+        </member>
+        <member name="P:SearchEngine.Keywords.TermId">
+            <summary>
+            Gets the Term ID
+            </summary>
+        </member>
+        <member name="P:SearchEngine.Keywords.Documents">
+            <summary>
+            returns the files that contain this term 
+            </summary>
+        </member>
+        <member name="T:SearchEngine.WordDictionary">
+            <summary>
+            Takes a document, extracts tokens and creates an index table showing words and the number of occurrences of each word
+            </summary>
+        </member>
+        <member name="M:SearchEngine.WordDictionary.SingleWordDictionary(System.Collections.Generic.Dictionary{System.String,System.Collections.Generic.List{System.String}})">
+            <summary>
+            Documents Index Table generator
+            Requires: The input to the index table generator is not null
+            </summary>
+            <exception cref="T:System.NullReferenceException">Thrown when the input to the index table is null</exception>
+            <param name="listresult">
+             A dictionary. The filepaths are contained in the key, while the value contains the file wordlist
+            </param>
+            <returns>
+             A SortedDictionary where the Key is the Word and the Value is an
+             object that contains a list of all the files where that word can be found
+            </returns>
+        </member>
+        <member name="M:SearchEngine.WordDictionary.Match(System.Collections.Generic.SortedDictionary{System.String,SearchEngine.Keywords},System.String)">
+            <summary>
+            Takes the users query string and returns a list of files that have the keywords
+            of the search in it, sorted by their relevance to the query in inverse order
+            
+            Requires: The query value is not empty or null or whitespaces
+            </summary>
+            <exception cref="T:System.NullReferenceException">Thrown when an empty or null query is entered</exception>
+            <param name="Indexes">index table</param>
+            <param name="query">the string the user enters</param>
+            <returns>Files keyword list, sorted in inverse order according to relevance to query, and the time taken</returns>
+        </member>
+        <member name="M:SearchEngine.WordDictionary.DocRankValue(SearchEngine.Document,System.Collections.Generic.List{System.String},System.Collections.Generic.SortedDictionary{System.String,SearchEngine.Keywords},System.Collections.Generic.Dictionary{System.String,System.Single})">
+            <summary>
+            Gets the rank value for a document on a query
+            </summary>
+            <param name="d">the current document</param>
+            <param name="terms">the query in a tokenized form</param>
+            <param name="Indexes">the index table</param>
+            <param name="termRelevance">A dictionary which holds all the terms and their relevance factors</param>
+            <returns>the rank value for a document on a query</returns>
+        </member>
+        <member name="M:SearchEngine.WordDictionary.WeighTerm(System.String,SearchEngine.Document,System.Collections.Generic.SortedDictionary{System.String,SearchEngine.Keywords})">
+            <summary>
+            Weighs a term in a document according to its relevance 
+            </summary>
+            <param name="term">the term</param>
+            <param name="doc">the document</param>
+            <param name="Indexes">the index table</param>
+            <returns>the relevance factor for a term/token in a document</returns>
+        </member>
+        <member name="T:SearchEngine.Properties.Resources">
+            <summary>
+              A strongly-typed resource class, for looking up localized strings, etc.
+            </summary>
+        </member>
+        <member name="P:SearchEngine.Properties.Resources.ResourceManager">
+            <summary>
+              Returns the cached ResourceManager instance used by this class.
+            </summary>
+        </member>
+        <member name="P:SearchEngine.Properties.Resources.Culture">
+            <summary>
+              Overrides the current thread's CurrentUICulture property for all
+              resource lookups using this strongly typed resource class.
+            </summary>
+        </member>
+    </members>
+</doc>
